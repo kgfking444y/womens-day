@@ -837,33 +837,33 @@
             </div>
         </section>
 
-        <!-- ========== MODAL ========== -->
-        <div class="modal-overlay" id="modal-overlay">
-            <div class="modal" id="modal">
-                <button class="modal-close" id="modal-close">✕</button>
-                <div class="modal-header">
-                    <div class="modal-icon" id="modal-icon"></div>
-                    <h2 id="modal-title"></h2>
-                    <span class="modal-relation" id="modal-relation"></span>
-                </div>
-                <div class="modal-divider"></div>
-                <div class="modal-message" id="modal-message"></div>
-                <div class="modal-quote" id="modal-quote">
-                    <p id="modal-quote-text"></p>
-                </div>
-                <div class="modal-footer" id="modal-footer"></div>
-                <div style="text-align:center;">
-                    <button class="share-btn" id="share-btn">📋 Copy Wish</button>
-                </div>
-            </div>
-        </div>
-
         <!-- ========== FOOTER ========== -->
         <footer class="site-footer">
             <p>Made with <span class="heart">♥</span> to celebrate womanhood</p>
             <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.5;">Happy International Women's Day 2026</p>
         </footer>
     </div><!-- end page-cards -->
+
+    <!-- ========== MODAL (outside page-cards so z-index works) ========== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modal-icon"></div>
+                <h2 id="modal-title"></h2>
+                <span class="modal-relation" id="modal-relation"></span>
+            </div>
+            <div class="modal-divider"></div>
+            <div class="modal-message" id="modal-message"></div>
+            <div class="modal-quote" id="modal-quote">
+                <p id="modal-quote-text"></p>
+            </div>
+            <div class="modal-footer" id="modal-footer"></div>
+            <div style="text-align:center;">
+                <button class="share-btn" id="share-btn">📋 Copy Wish</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // ===== WISH DATA =====
