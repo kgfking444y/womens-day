@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day 💐 | Celebrate Every Woman</title>
+    <meta name="description" content="Celebrate International Women's Day with heartfelt wishes for every special woman in your life.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #e91e90;
+            --primary-light: #ff6ec7;
+            --primary-dark: #b5006e;
+            --accent: #ff9a56;
+            --gold: #ffd700;
+            --bg-dark: #0a0a1a;
+            --bg-card: rgba(255,255,255,0.06);
+            --text: #f0e6f6;
+            --text-muted: #b8a9c9;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.12);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATED BACKGROUND ===== */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-animation .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: floatOrb 15s ease-in-out infinite;
+        }
+        .bg-animation .orb:nth-child(1) {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, #e91e90, transparent 70%);
+            top: -10%; left: -10%;
+            animation-delay: 0s;
+        }
+        .bg-animation .orb:nth-child(2) {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #ff6ec7, transparent 70%);
+            top: 50%; right: -10%;
+            animation-delay: -5s;
+        }
+        .bg-animation .orb:nth-child(3) {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, #ff9a56, transparent 70%);
+            bottom: -10%; left: 30%;
+            animation-delay: -10s;
+        }
+        .bg-animation .orb:nth-child(4) {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, #a855f7, transparent 70%);
+            top: 20%; left: 60%;
+            animation-delay: -7s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(60px, -40px) scale(1.15); }
+            66% { transform: translate(-40px, 50px) scale(0.9); }
+        }
+
+        /* ===== FLOATING PETALS ===== */
+        .petal {
+            position: fixed;
+            z-index: 1;
+            pointer-events: none;
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(110vh) rotate(720deg) translateX(80px); opacity: 0; }
+        }
+
+        /* ===== HEADER / HERO ===== */
+        .hero {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff, #ff6ec7, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero h1 .script {
+            font-family: 'Dancing Script', cursive;
+            display: block;
+            font-size: clamp(1.8rem, 5vw, 4rem);
+            background: linear-gradient(135deg, #ff6ec7, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(233, 30, 144, 0.4);
+            animation: fadeInUp 1s ease 0.6s both;
+            text-decoration: none;
+        }
+        .hero-cta:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(233, 30, 144, 0.6);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            animation: bounce 2s ease infinite;
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            position: relative;
+            z-index: 2;
+            padding: 5rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #fff, #ff6ec7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* ===== CARDS GRID ===== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .wish-card {
+            position: relative;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        .wish-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(233,30,144,0.08));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .wish-card:hover::before { opacity: 1; }
+
+        .wish-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(233,30,144,0.3);
+            box-shadow: 0 20px 60px rgba(233,30,144,0.15);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            position: relative;
+            z-index: 1;
+            transition: gap 0.3s ease;
+        }
+        .wish-card:hover .card-cta { gap: 0.8rem; }
+
+        .card-sparkle {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            transform: scale(0) rotate(-45deg);
+        }
+        .wish-card:hover .card-sparkle {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        /* Card color themes */
+        .card-mom .card-icon { background: linear-gradient(135deg, #ff6b9d, #c644fc); }
+        .card-wife .card-icon { background: linear-gradient(135deg, #e91e90, #ff9a56); }
+        .card-girlfriend .card-icon { background: linear-gradient(135deg, #ff4081, #ff80ab); }
+        .card-sister .card-icon { background: linear-gradient(135deg, #ab47bc, #e040fb); }
+        .card-bestfriend .card-icon { background: linear-gradient(135deg, #ff6ec7, #ffd700); }
+        .card-daughter .card-icon { background: linear-gradient(135deg, #f48fb1, #ff80ab); }
+        .card-grandmother .card-icon { background: linear-gradient(135deg, #ce93d8, #ba68c8); }
+        .card-aunt .card-icon { background: linear-gradient(135deg, #ff8a65, #ff5252); }
+        .card-teacher .card-icon { background: linear-gradient(135deg, #4fc3f7, #7c4dff); }
+        .card-colleague .card-icon { background: linear-gradient(135deg, #81c784, #66bb6a); }
+        .card-boss .card-icon { background: linear-gradient(135deg, #ffd54f, #ffb300); }
+        .card-motherilaw .card-icon { background: linear-gradient(135deg, #ef9a9a, #e57373); }
+        .card-niece .card-icon { background: linear-gradient(135deg, #f8bbd0, #f06292); }
+        .card-cousin .card-icon { background: linear-gradient(135deg, #b39ddb, #9575cd); }
+        .card-neighbor .card-icon { background: linear-gradient(135deg, #80deea, #26c6da); }
+        .card-mentor .card-icon { background: linear-gradient(135deg, #a5d6a7, #4caf50); }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: linear-gradient(145deg, #1a1030, #0d0d24);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            transform: scale(0.8) translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .modal-overlay.active .modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal::-webkit-scrollbar { width: 6px; }
+        .modal::-webkit-scrollbar-track { background: transparent; }
+        .modal::-webkit-scrollbar-thumb {
+            background: rgba(233,30,144,0.3);
+            border-radius: 3px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem; right: 1rem;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .modal-close:hover {
+            background: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .modal-icon {
+            width: 80px; height: 80px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.2rem;
+        }
+        .modal-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .modal-header .modal-relation {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: var(--primary-light);
+        }
+
+        .modal-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            margin: 1.5rem auto;
+        }
+
+        .modal-message {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            text-align: center;
+            white-space: pre-line;
+        }
+
+        .modal-quote {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(233,30,144,0.07);
+            border-radius: 16px;
+            border-left: 3px solid var(--primary);
+            text-align: left;
+        }
+        .modal-quote p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: var(--primary-light);
+            line-height: 1.6;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(233,30,144,0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .site-footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .site-footer .heart { color: var(--primary); }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== CONFETTI CANVAS ===== */
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+            .wish-card { padding: 1.5rem; }
+            .modal { padding: 1.8rem 1.5rem; max-height: 90vh; }
+            .modal-header h2 { font-size: 1.5rem; }
+            .section { padding: 3rem 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-cta {
+                padding: 0.85rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-badge">✨ March 8, 2026 ✨</div>
+        <h1>
+            Happy Women's Day
+            <span class="script">To Every Incredible Woman</span>
+        </h1>
+        <p>
+            Celebrate the strength, grace, and beauty of every woman in your life.
+            Send heartfelt wishes to the ones who matter most. 💐
+        </p>
+        <a href="#wishes" class="hero-cta">
+            💌 Send Your Wishes
+        </a>
+        <div class="scroll-indicator">⌄</div>
+    </section>
+
+    <!-- ========== CARDS SECTION ========== -->
+    <section class="section" id="wishes">
+        <div class="section-title">
+            <h2>Choose a Special Woman 💕</h2>
+            <p>Select a relationship to see a heartfelt wish crafted just for her</p>
+        </div>
+
+        <div class="cards-grid" id="cards-grid">
+            <!-- Cards generated by JS -->
+        </div>
+    </section>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modal-icon"></div>
+                <h2 id="modal-title"></h2>
+                <span class="modal-relation" id="modal-relation"></span>
+            </div>
+            <div class="modal-divider"></div>
+            <div class="modal-message" id="modal-message"></div>
+            <div class="modal-quote" id="modal-quote">
+                <p id="modal-quote-text"></p>
+            </div>
+            <div class="modal-footer" id="modal-footer"></div>
+            <div style="text-align:center;">
+                <button class="share-btn" id="share-btn">📋 Copy Wish</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <p>Made with <span class="heart">♥</span> to celebrate womanhood</p>
+        <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.5;">Happy International Women's Day 2026</p>
+    </footer>
+
+<script>
+// ===== WISH DATA =====
+const wishes = [
+    {
+        id: 'mom',
+        icon: '👩‍👧',
+        title: 'For Mom',
+        subtitle: 'The first woman who loved you unconditionally',
+        cssClass: 'card-mom',
+        modalTitle: 'Happy Women\'s Day, Mom! 💖',
+        relation: 'The Queen of My Heart',
+        gradient: 'linear-gradient(135deg, #ff6b9d, #c644fc)',
+        message: `Dear Mom,
+
+You are the foundation of everything beautiful in my life. From the first breath I took, you have been my strength, my shelter, and my greatest cheerleader.
+
+You taught me what it means to be resilient — to get back up even when the world pushes you down. Your sacrifices have never gone unnoticed, and your love is the most powerful force I have ever known.
+
+Every meal you cooked, every tear you wiped, every sleepless night you spent watching over me — these are the threads that weave the fabric of who I am today.
+
+On this Women's Day, I want you to know that you are not just my mother — you are my hero, my role model, and the most extraordinary woman I will ever know.
+
+Thank you for showing me what true strength looks like. It looks like you. 🌹`,
+        quote: '"A mother\'s love is the fuel that enables a normal human being to do the impossible." — Marion C. Garretty',
+        footer: '🌸 👩‍👧 💐 🌷 🌹'
+    },
+    {
+        id: 'wife',
+        icon: '💑',
+        title: 'For Wife',
+        subtitle: 'Your partner, your soulmate, your everything',
+        cssClass: 'card-wife',
+        modalTitle: 'Happy Women\'s Day, My Love! 💕',
+        relation: 'My Better Half',
+        gradient: 'linear-gradient(135deg, #e91e90, #ff9a56)',
+        message: `My Dearest,
+
+Every day with you feels like a beautiful dream I never want to wake up from. You are the sunrise that lights up my world and the gentle breeze that calms every storm in my life.
+
+You carry the weight of our home, our dreams, and our future with a grace that leaves me in awe. Your strength is not loud — it's the quiet kind that moves mountains.
+
+You are my partner in every adventure, my comfort in every sorrow, and my joy in every celebration. The way you balance everything — your career, our family, and still find time to be the most loving person — it's nothing short of magical.
+
+On this Women's Day, I want to celebrate YOU — the woman who makes every day worth living. You deserve the world, and I promise to spend the rest of my life trying to give it to you.
+
+I love you more than words could ever say. ❤️`,
+        quote: '"Behind every successful person, there is a strong, wise, and loving woman." — A loving partner',
+        footer: '💕 💑 🌹 💍 ❤️'
+    },
+    {
+        id: 'girlfriend',
+        icon: '💗',
+        title: 'For Girlfriend',
+        subtitle: 'The one who makes your heart skip a beat',
+        cssClass: 'card-girlfriend',
+        modalTitle: 'Happy Women\'s Day, Beautiful! 🌹',
+        relation: 'The Sparkle in My Eyes',
+        gradient: 'linear-gradient(135deg, #ff4081, #ff80ab)',
+        message: `Hey Beautiful,
+
+You walked into my life and turned everything into poetry. Your smile is the most beautiful curve I've ever seen, and your laughter is my favorite melody.
+
+You inspire me to be better every single day. The way you chase your dreams, stand up for what you believe in, and still manage to spread kindness everywhere — it amazes me.
+
+You are not just my girlfriend — you are my best friend, my confidante, and my greatest adventure. Every moment with you feels like a page from the most beautiful love story ever written.
+
+On this Women's Day, I celebrate your spirit, your intelligence, your compassion, and everything that makes you the incredible woman you are.
+
+You are extraordinary, and I am incredibly lucky to have you in my life. 🌟`,
+        quote: '"She was a wildflower in a world of roses, and she chose to bloom her own way."',
+        footer: '💗 🌹 ✨ 🦋 💫'
+    },
+    {
+        id: 'sister',
+        icon: '👭',
+        title: 'For Sister',
+        subtitle: 'Your first friend and forever companion',
+        cssClass: 'card-sister',
+        modalTitle: 'Happy Women\'s Day, Sis! 💜',
+        relation: 'My Built-in Best Friend',
+        gradient: 'linear-gradient(135deg, #ab47bc, #e040fb)',
+        message: `Dear Sister,
+
+You are the person who has seen me at my best and my worst and loved me through it all. Growing up with you was the greatest gift life ever gave me.
+
+From our childhood fights to our late-night secrets, from stealing each other's clothes to being each other's biggest supporters — every memory with you is a treasure I hold close to my heart.
+
+You are fierce, compassionate, brilliantly funny, and stronger than you will ever know. The way you face challenges head-on and still manage to light up every room you walk into is truly inspiring.
+
+On this Women's Day, I want you to know that I am proud to call you my sister. You are not just family — you are my forever friend, my partner in crime, and one of the most amazing women in the world.
+
+Keep shining, sis. The world is brighter because of you. ⭐`,
+        quote: '"A sister is both your mirror and your opposite." — Elizabeth Fishel',
+        footer: '👭 💜 🌸 ✨ 🎀'
+    },
+    {
+        id: 'bestfriend',
+        icon: '👯‍♀️',
+        title: 'For Best Friend',
+        subtitle: 'The sister you chose for yourself',
+        cssClass: 'card-bestfriend',
+        modalTitle: 'Happy Women\'s Day, Bestie! 🌟',
+        relation: 'My Soul Sister',
+        gradient: 'linear-gradient(135deg, #ff6ec7, #ffd700)',
+        message: `Hey Bestie,
+
+Some friendships are written in the stars, and ours is definitely one of them. You are the person who gets me without me having to explain, who laughs at my terrible jokes, and who shows up when the world falls apart.
+
+You have seen me ugly-cry, celebrate silly wins, and everything in between. Through every heartbreak, every triumph, every late-night phone call, and every spontaneous adventure — you have been there.
+
+Your strength inspires me. The way you handle life's curveballs with grace and humor is something I deeply admire. You lift others up even when you're going through your own storms.
+
+On this Women's Day, I celebrate our bond — a friendship that is rare, beautiful, and unbreakable. Thank you for being my person.
+
+Here's to us, to our memories, and to all the adventures yet to come! 🥂`,
+        quote: '"A good friend knows all your stories. A best friend helped you write them."',
+        footer: '👯‍♀️ 🌟 🥂 💛 ✨'
+    },
+    {
+        id: 'daughter',
+        icon: '👧',
+        title: 'For Daughter',
+        subtitle: 'The little girl who stole your heart forever',
+        cssClass: 'card-daughter',
+        modalTitle: 'Happy Women\'s Day, My Princess! 👑',
+        relation: 'The Light of My Life',
+        gradient: 'linear-gradient(135deg, #f48fb1, #ff80ab)',
+        message: `My Dearest Daughter,
+
+From the moment you came into this world, you filled my life with a love I never knew existed. Watching you grow into the amazing young woman you are today has been the greatest joy of my life.
+
+You are smart, kind, creative, and brave in ways that take my breath away. Every time you solve a problem, stand up for someone, or chase a new dream, my heart swells with pride.
+
+The world is yours for the taking, sweetheart. Never let anyone dim your light or tell you what you can't do. You are capable of incredible things, and I believe in you with every fiber of my being.
+
+On this Women's Day, I want you to remember: You are enough. You are worthy. You are powerful. And you are loved beyond measure.
+
+Fly high, my darling. The sky is just the beginning. 🦋`,
+        quote: '"She is clothed in strength and dignity, and she laughs without fear of the future." — Proverbs 31:25',
+        footer: '👧 👑 🦋 🌈 💖'
+    },
+    {
+        id: 'grandmother',
+        icon: '👵',
+        title: 'For Grandmother',
+        subtitle: 'The roots of your family\'s strength',
+        cssClass: 'card-grandmother',
+        modalTitle: 'Happy Women\'s Day, Grandma! 🌺',
+        relation: 'The Pillar of Our Family',
+        gradient: 'linear-gradient(135deg, #ce93d8, #ba68c8)',
+        message: `Dearest Grandmother,
+
+You are the heartbeat of our family — the one who holds us all together with your wisdom, warmth, and unconditional love. Your stories, your recipes, your gentle touch — they are the treasures that make our family rich.
+
+You have lived through challenges that would break most people, yet here you stand — stronger, wiser, and more graceful than ever. Your resilience is a living testament to the power of a woman's spirit.
+
+Every wrinkle on your face tells a story of love, sacrifice, and courage. Every gray hair is a crown you've earned through a lifetime of giving.
+
+On this Women's Day, I honor you, Grandma. You are the foundation upon which our family's legacy is built. Thank you for your endless love, your timeless wisdom, and for being the extraordinary woman you are.
+
+We love you more than you'll ever know. 🌻`,
+        quote: '"Grandmothers hold our tiny hands for just a little while, but our hearts forever."',
+        footer: '👵 🌺 🌻 💐 🏵️'
+    },
+    {
+        id: 'aunt',
+        icon: '💃',
+        title: 'For Aunt',
+        subtitle: 'The cool one who always has your back',
+        cssClass: 'card-aunt',
+        modalTitle: 'Happy Women\'s Day, Auntie! 🌸',
+        relation: 'The Fun & Wise One',
+        gradient: 'linear-gradient(135deg, #ff8a65, #ff5252)',
+        message: `Dear Aunt,
+
+You are that special blend of fun and wisdom that makes life so much more interesting. You're like a second mother, a friend, and a confidante all rolled into one amazing woman.
+
+Growing up, you were the one who snuck me extra treats, told me the stories my parents wouldn't, and gave me advice that actually made sense. You showed me that being a woman means being free, fierce, and fabulously yourself.
+
+Your energy is infectious, your generosity is boundless, and your love is a warm blanket on a cold day. You make family gatherings brighter and every moment you're around feel like a celebration.
+
+On this Women's Day, I celebrate YOU — the aunt who is more like a best friend, the woman who proves that family bonds are among the most beautiful things in life.
+
+Thank you for being you. We love you endlessly! 💃`,
+        quote: '"Aunts are like moms, only cooler." — Unknown',
+        footer: '💃 🌸 🎉 💖 🌷'
+    },
+    {
+        id: 'teacher',
+        icon: '📚',
+        title: 'For Teacher / Mentor',
+        subtitle: 'The one who shaped your mind and future',
+        cssClass: 'card-teacher',
+        modalTitle: 'Happy Women\'s Day, Dear Teacher! 📖',
+        relation: 'The Guiding Light',
+        gradient: 'linear-gradient(135deg, #4fc3f7, #7c4dff)',
+        message: `Dear Teacher,
+
+You are not just someone who taught me from textbooks — you are someone who taught me how to think, how to dream, and how to believe in myself.
+
+Behind every lesson you delivered was genuine care. Behind every correction was a desire to see me succeed. You didn't just shape my academic journey — you shaped the person I am becoming.
+
+The patience you show, the passion you carry for your work, and the countless hours you dedicate to nurturing minds — these are acts of quiet heroism that often go unrecognized.
+
+On this Women's Day, I want you to know that your impact goes far beyond the classroom. You have planted seeds of knowledge and confidence that will bloom for a lifetime.
+
+Thank you, dear teacher, for being a beacon of wisdom and inspiration. The world needs more women like you. 🌟`,
+        quote: '"A good teacher can inspire hope, ignite the imagination, and instill a love of learning." — Brad Henry',
+        footer: '📚 🌟 📖 🎓 ✨'
+    },
+    {
+        id: 'colleague',
+        icon: '💼',
+        title: 'For Colleague',
+        subtitle: 'The teammate who makes work better',
+        cssClass: 'card-colleague',
+        modalTitle: 'Happy Women\'s Day, Colleague! 🤝',
+        relation: 'The Dream Team Player',
+        gradient: 'linear-gradient(135deg, #81c784, #66bb6a)',
+        message: `Dear Colleague,
+
+Working alongside you is both a pleasure and a privilege. You bring a unique energy to our team — a perfect mix of professionalism, creativity, and genuine warmth.
+
+You tackle challenges with a determination that motivates everyone around you. Your ideas are always fresh, your work ethic is inspiring, and the way you support your teammates makes our workplace so much better.
+
+Whether it's brainstorming sessions, tight deadlines, or those random coffee-break conversations, you bring your best self to everything you do. That's rare and truly admirable.
+
+On this Women's Day, I celebrate your contributions, your talent, and the incredible professional you are. You are breaking ceilings and paving paths, and the impact you make resonates far beyond the office walls.
+
+Here's to your success, your growth, and all the amazing things you'll achieve! 🚀`,
+        quote: '"Empowered women empower women." — Unknown',
+        footer: '💼 🤝 🚀 ⭐ 🏆'
+    },
+    {
+        id: 'boss',
+        icon: '👩‍💼',
+        title: 'For Boss / Leader',
+        subtitle: 'The woman who leads with vision and heart',
+        cssClass: 'card-boss',
+        modalTitle: 'Happy Women\'s Day, Ma\'am! 👑',
+        relation: 'The Inspirational Leader',
+        gradient: 'linear-gradient(135deg, #ffd54f, #ffb300)',
+        message: `Dear Boss,
+
+Leading isn't easy, but you make it look effortless. Your vision, your decisiveness, and your ability to bring out the best in people are qualities that define true leadership.
+
+You've created a space where everyone feels valued and heard. You lead not just with your mind, but with your heart — and that makes all the difference. Under your guidance, challenges become opportunities and setbacks become stepping stones.
+
+You've shown me that leadership isn't about power — it's about empowering others. Every time you mentor, encourage, or advocate for your team, you leave a lasting imprint.
+
+On this Women's Day, I want to acknowledge and appreciate your remarkable leadership. You are not just a boss — you are an inspiration, a trailblazer, and a role model for women in leadership everywhere.
+
+Thank you for paving the way. 🌟`,
+        quote: '"A leader is not the one who has the most followers, but the one who creates the most leaders." — Tom Peters',
+        footer: '👩‍💼 👑 🌟 💪 🏅'
+    },
+    {
+        id: 'motherinlaw',
+        icon: '🌷',
+        title: 'For Mother-in-Law',
+        subtitle: 'The woman who raised the love of your life',
+        cssClass: 'card-motherilaw',
+        modalTitle: 'Happy Women\'s Day, Dear Mother-in-Law! 🌷',
+        relation: 'My Second Mom',
+        gradient: 'linear-gradient(135deg, #ef9a9a, #e57373)',
+        message: `Dear Mother-in-Law,
+
+You welcomed me into your family with open arms and a generous heart. Thank you for raising the wonderful person I fell in love with — they are a reflection of your love and values.
+
+You've been so much more than a mother-in-law to me. You've been a guide, a friend, and a source of comfort. Your warmth made me feel at home from our very first meeting.
+
+Your strength and dignity inspire me deeply. The way you nurture your family, the wisdom you share, and the love you give so freely — these are gifts that I treasure every day.
+
+On this Women's Day, I want you to know how grateful I am for you. You are an irreplaceable part of my life, and I am blessed to have you as my second mom.
+
+With love and deep respect. 💐`,
+        quote: '"The best mothers teach us that love has no boundaries."',
+        footer: '🌷 💐 🏡 ❤️ 🌸'
+    },
+    {
+        id: 'niece',
+        icon: '🌈',
+        title: 'For Niece',
+        subtitle: 'The little bundle of joy and dreams',
+        cssClass: 'card-niece',
+        modalTitle: 'Happy Women\'s Day, Sweet Niece! 🌈',
+        relation: 'The Future is Hers',
+        gradient: 'linear-gradient(135deg, #f8bbd0, #f06292)',
+        message: `My Dear Niece,
+
+Watching you grow up has been one of the greatest joys of my life. You are a beautiful mix of curiosity, courage, and kindness that makes everyone around you smile.
+
+You are growing into a phenomenal young woman. Your questions make me think, your creativity amazes me, and your heart is as big as the ocean. Never lose that spark.
+
+The world can sometimes be tough, but remember — you come from a line of strong women, and that strength flows through your veins. You can be anything you want to be.
+
+On this Women's Day, I want you to know: Dream big. Be bold. Be kind. And always, always believe in yourself. Because I believe in you with all my heart.
+
+Your aunt/uncle will always be your biggest fan. 🌟`,
+        quote: '"Here\'s to strong women. May we know them. May we be them. May we raise them."',
+        footer: '🌈 🌟 🦋 💖 ⭐'
+    },
+    {
+        id: 'cousin',
+        icon: '🎀',
+        title: 'For Cousin',
+        subtitle: 'The family friend who feels like a sister',
+        cssClass: 'card-cousin',
+        modalTitle: 'Happy Women\'s Day, Cousin! 🎀',
+        relation: 'Family by Blood, Friends by Choice',
+        gradient: 'linear-gradient(135deg, #b39ddb, #9575cd)',
+        message: `Dear Cousin,
+
+Growing up together was an adventure, and I wouldn't trade those memories for anything in the world. From family gatherings to secret whispers, from shared laughter to supporting each other through tough times — you've been a constant in my life.
+
+You are brilliant, resilient, and full of life. The way you handle both challenges and celebrations with equal grace is truly admirable. You make our family gatherings so much more fun and meaningful.
+
+Distance may separate us sometimes, but our bond remains unshaken. You're not just my cousin — you're a friend, a confidante, and a sister in every way that matters.
+
+On this Women's Day, I celebrate the incredible woman you are. You make our family proud, and I am so grateful to have you in my life.
+
+Cheers to our bond that only grows stronger! 🥂`,
+        quote: '"Cousins are those rare people who ask how we are and then wait to hear the answer."',
+        footer: '🎀 🥂 👯 💜 ✨'
+    },
+    {
+        id: 'neighbor',
+        icon: '🏡',
+        title: 'For Neighbor',
+        subtitle: 'The friendly face next door who feels like family',
+        cssClass: 'card-neighbor',
+        modalTitle: 'Happy Women\'s Day, Dear Neighbor! 🏡',
+        relation: 'The Heart of Our Community',
+        gradient: 'linear-gradient(135deg, #80deea, #26c6da)',
+        message: `Dear Neighbor,
+
+Good neighbors are a rare blessing, and you are the best anyone could ask for. Your friendly smile, your willingness to help, and your warm presence make our community a beautiful place to live.
+
+Whether it's looking out for each other, sharing home-cooked food, or simply having a chat over the fence — you bring so much goodness into our lives. Your kindness doesn't go unnoticed.
+
+You prove every day that community is built on small acts of love. And you do it so effortlessly.
+
+On this Women's Day, I want to celebrate you and the wonderful woman you are. Thank you for being not just a neighbor, but a friend and an integral part of our little community.
+
+Wishing you a beautiful Women's Day! 🌻`,
+        quote: '"A good neighbor is a found treasure."',
+        footer: '🏡 🌻 🤗 🫶 🌼'
+    },
+    {
+        id: 'mentor',
+        icon: '🧭',
+        title: 'For Mentor / Guide',
+        subtitle: 'The woman who lit the path ahead',
+        cssClass: 'card-mentor',
+        modalTitle: 'Happy Women\'s Day, Dear Mentor! 🧭',
+        relation: 'The Compass of My Journey',
+        gradient: 'linear-gradient(135deg, #a5d6a7, #4caf50)',
+        message: `Dear Mentor,
+
+Meeting you was a turning point in my life. Before your guidance, I was navigating in the dark — but you brought clarity, direction, and confidence.
+
+You didn't just teach me skills — you taught me how to think critically, how to handle failure with grace, and how to celebrate success with humility. Your wisdom is a gift that I carry with me every day.
+
+What makes you truly exceptional is that you lead by example. Your integrity, your work ethic, and your compassion set a standard that I aspire to every single day.
+
+On this Women's Day, I want to express my deepest gratitude. You are proof that when a woman uplifts another, incredible things happen. You've changed my life, and I am forever grateful.
+
+Thank you for believing in me when I didn't believe in myself. 🌟`,
+        quote: '"The greatest gift of mentorship is not what you learn but who you become."',
+        footer: '🧭 🌟 🔥 💎 🌱'
+    }
+];
+
+// ===== RENDER CARDS =====
+const grid = document.getElementById('cards-grid');
+
+wishes.forEach((wish, idx) => {
+    const card = document.createElement('div');
+    card.className = `wish-card ${wish.cssClass} card-reveal`;
+    card.setAttribute('data-id', wish.id);
+    card.style.transitionDelay = `${idx * 0.08}s`;
+    card.innerHTML = `
+        <span class="card-sparkle">✨</span>
+        <div class="card-icon">${wish.icon}</div>
+        <div class="card-title">${wish.title}</div>
+        <div class="card-subtitle">${wish.subtitle}</div>
+        <div class="card-cta">Open Wish →</div>
+    `;
+    card.addEventListener('click', () => openModal(wish));
+    grid.appendChild(card);
+});
+
+// ===== INTERSECTION OBSERVER FOR CARD ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.card-reveal').forEach(card => observer.observe(card));
+
+// ===== MODAL =====
+const overlay = document.getElementById('modal-overlay');
+const modalIcon = document.getElementById('modal-icon');
+const modalTitle = document.getElementById('modal-title');
+const modalRelation = document.getElementById('modal-relation');
+const modalMessage = document.getElementById('modal-message');
+const modalQuoteText = document.getElementById('modal-quote-text');
+const modalFooter = document.getElementById('modal-footer');
+const modalClose = document.getElementById('modal-close');
+const shareBtn = document.getElementById('share-btn');
+
+let currentWish = null;
+
+function openModal(wish) {
+    currentWish = wish;
+    modalIcon.style.background = wish.gradient;
+    modalIcon.textContent = wish.icon;
+    modalTitle.textContent = wish.modalTitle;
+    modalRelation.textContent = wish.relation;
+    modalMessage.textContent = wish.message;
+    modalQuoteText.textContent = wish.quote;
+    modalFooter.textContent = wish.footer;
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Trigger mini confetti burst
+    launchConfetti();
+}
+
+function closeModal() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    currentWish = null;
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
+// ===== COPY / SHARE =====
+shareBtn.addEventListener('click', () => {
+    if (!currentWish) return;
+    const text = `${currentWish.modalTitle}\n\n${currentWish.message}\n\n${currentWish.quote}`;
+    navigator.clipboard.writeText(text).then(() => {
+        shareBtn.textContent = '✅ Copied!';
+        setTimeout(() => { shareBtn.innerHTML = '📋 Copy Wish'; }, 2000);
+    }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        shareBtn.textContent = '✅ Copied!';
+        setTimeout(() => { shareBtn.innerHTML = '📋 Copy Wish'; }, 2000);
+    });
+});
+
+// ===== FLOATING PETALS =====
+const petalEmoji = ['🌸', '🌺', '🌷', '💐', '🌹', '🪷', '🌼', '💮', '🏵️', '✿'];
+function createPetal() {
+    const petal = document.createElement('div');
+    petal.className = 'petal';
+    petal.textContent = petalEmoji[Math.floor(Math.random() * petalEmoji.length)];
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.animationDuration = (8 + Math.random() * 10) + 's';
+    petal.style.animationDelay = Math.random() * 5 + 's';
+    petal.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+    document.body.appendChild(petal);
+    setTimeout(() => petal.remove(), 20000);
+}
+// Generate petals periodically
+setInterval(createPetal, 800);
+for (let i = 0; i < 12; i++) createPetal();
+
+// ===== CONFETTI =====
+const confettiCanvas = document.getElementById('confetti-canvas');
+const ctx = confettiCanvas.getContext('2d');
+let confettiPieces = [];
+let animating = false;
+
+function resizeCanvas() {
+    confettiCanvas.width = window.innerWidth;
+    confettiCanvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function launchConfetti() {
+    const colors = ['#e91e90', '#ff6ec7', '#ffd700', '#ff9a56', '#a855f7', '#fff', '#ff4081'];
+    for (let i = 0; i < 60; i++) {
+        confettiPieces.push({
+            x: Math.random() * confettiCanvas.width,
+            y: -20,
+            w: 6 + Math.random() * 6,
+            h: 4 + Math.random() * 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            vx: (Math.random() - 0.5) * 6,
+            vy: 2 + Math.random() * 4,
+            rot: Math.random() * 360,
+            rotSpeed: (Math.random() - 0.5) * 10,
+            opacity: 1
+        });
+    }
+    if (!animating) {
+        animating = true;
+        animateConfetti();
+    }
+}
+
+function animateConfetti() {
+    ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+    confettiPieces.forEach((p, i) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.05;
+        p.rot += p.rotSpeed;
+        p.opacity -= 0.005;
+        if (p.opacity <= 0) { confettiPieces.splice(i, 1); return; }
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.globalAlpha = p.opacity;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+    });
+
+    if (confettiPieces.length > 0) {
+        requestAnimationFrame(animateConfetti);
+    } else {
+        animating = false;
+    }
+}
+
+// Initial confetti burst on load
+window.addEventListener('load', () => {
+    setTimeout(launchConfetti, 500);
+});
+</script>
+</body>
+</html>
